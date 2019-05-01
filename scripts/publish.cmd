@@ -1,0 +1,1 @@
+CALL hosting\firebase deploy
