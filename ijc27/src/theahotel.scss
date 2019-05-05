@@ -79,12 +79,13 @@ $theahotel-accent:  mat-palette($thea-accent, 300); //Lighter , Darker and Defau
 $theahotel:   mat-light-theme($theahotel-primary, $theahotel-accent);
 $theahotel-warn: mat-palette($mat-red);
 
+@import './app/navigation/navtabs/navtabs.component.scss';
+
 // Include the default theme styles.
 @include angular-material-theme($theahotel);
+@include navtabs-component-theme($theahotel);
 
-.navtabs-container {
-  background: mat-color($theahotel-primary, lighter);
-}
+
 
 .mat-list-option:hover,
 .mat-list-option.mat-list-item-focus,
