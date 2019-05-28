@@ -1,3 +1,10 @@
 <p>
   celebrations works!
 </p>
+  <li *ngFor="let note of notes" | async>
+  {{ note.content| json}} with {{note.hearts}}
+  </li>
+<!--<div>-->
+<!--    <input [(ngModel)]="newContent">-->
+<!--    <button (click)="updateContent()"></button>-->
+<!--</div>-->

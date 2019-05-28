@@ -30,11 +30,20 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { NavtabsComponent } from './navigation/navtabs/navtabs.component';
+import {environment} from "../environments/environment";
 
+//TODO 01 Move angularFireIntoOutsideModule
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import {FormsModule} from "@angular/forms";
+
+export const firebaseConfig = environment.firebaseConfig;
 @NgModule({
   declarations: [
     AppComponent,
-
     AccommodationComponent,
     RoomsComponent,
     LifestyleComponent,
@@ -69,7 +78,15 @@ import { NavtabsComponent } from './navigation/navtabs/navtabs.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    //@ts-ignore
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
