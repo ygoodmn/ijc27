@@ -2,3 +2,6 @@
 ijc27.iml
 ijc27/node_modules
 node_modules
+*.pdf
+ijc27/src/environments/environment.ts
+ijc27/src/environments/environment.prod.ts
